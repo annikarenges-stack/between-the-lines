@@ -6,6 +6,9 @@ Better Said is a local AI-powered conversation reflection prototype. Teams can p
 
 It is designed to support reflection and clearer communication - not to decide who is right.
 
+
+See this solution in action: https://www.youtube.com/watch?v=LmNp6bF4x8Q
+
 ## What it does
 
 - Accepts pasted transcripts and `.txt` / `.md` uploads.
