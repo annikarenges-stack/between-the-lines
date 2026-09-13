@@ -19,6 +19,13 @@ See this solution in action: https://www.youtube.com/watch?v=LmNp6bF4x8Q
 - Lets users download the report as self-contained HTML or use the browser print dialog to save it as PDF.
 - Includes a live practice conversation mode for neutral mentoring before a difficult conversation.
 
+- Front page:
+
+  <img width="1880" height="1017" alt="image" src="https://github.com/user-attachments/assets/99e64a52-bff1-4d16-98b7-86e92848653b" />
+
+  
+
+
 ## What it does not do
 
 - It does not determine who is right, evaluate someone’s character, or diagnose people.
@@ -30,11 +37,16 @@ See this solution in action: https://www.youtube.com/watch?v=LmNp6bF4x8Q
 ## How the report works
 
 1. A user uploads or pastes a conversation with clear speaker labels, for example `Alex: ...` and `Sam: ...`.
-2. The local server saves the transcript to `data/transcripts/`.
-3. The server sends the transcript to the OpenAI Responses API using a key stored only in the local `.env` file.
-4. The model returns structured analysis with direct evidence, counts, possible effects, and practical alternatives.
-5. Better Said creates one private HTML report per participant and saves it in `data/reports/`.
-6. The browser displays the selected report and can download it as HTML or print it to PDF.
+   Uploade the script and wait for the reflection to be generated:
+  <img width="1832" height="1012" alt="image" src="https://github.com/user-attachments/assets/e07ae65a-b210-433d-ad64-c101142ba686" />
+
+3. The local server saves the transcript to `data/transcripts/`.
+4. The server sends the transcript to the OpenAI Responses API using a key stored only in the local `.env` file.
+5. The model returns structured analysis with direct evidence, counts, possible effects, and practical alternatives.
+6. Better Said creates one private HTML report per participant and saves it in `data/reports/`.
+7. The browser displays the selected report and can download it as HTML or print it to PDF.
+   <img width="1871" height="1038" alt="image" src="https://github.com/user-attachments/assets/5e8e3c03-87fb-4e7a-9e27-4969aba1c842" />
+
 
 ## Run it locally
 
