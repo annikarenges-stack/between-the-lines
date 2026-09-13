@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bettersaid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="better.css">
+</head>
+<body>
+  <div class="orb teal"></div><div class="orb coral"></div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <button class="brand nav-action" data-view="home"><span class="brand-mark"></span><span>Bettersaid</span></button>
+      <nav>
+        <button class="nav-item nav-action active" data-view="home"><span>✦</span> New session</button>
+        <button class="nav-item nav-action" data-view="library"><span>◫</span> My reflections</button>
+        <button class="nav-item nav-action" data-view="guide"><span>?</span> How it works</button>
+      </nav>
+      <div class="side-note"><span>◌</span><p><strong>Understanding, not agreement</strong>Bettersaid is a neutral companion, not a judge.</p></div>
+    </aside>
+    <main class="workspace">
+      <section class="view active" id="home">
+        <header class="hero"><p class="eyebrow">Conversation companion</p><h1>A better way to<br><em>say what you mean.</em></h1><p>Choose how you would like to work with Bettersaid today.</p></header>
+        <div class="mode-grid">
+          <button class="mode-card" data-mode="transcript"><span class="mode-icon transcript-icon">≋</span><span class="mode-number">01</span><h2>Reflect on a transcript</h2><p>Upload or paste a finished conversation. Receive a calm, shareable analysis with practical ways forward.</p><span class="mode-link">Review a conversation <b>→</b></span></button>
+          <button class="mode-card" data-mode="live"><span class="mode-icon live-icon">◌</span><span class="mode-number">02</span><h2>Practice a conversation</h2><p>Talk through a difficult topic before it happens. Get neutral mentoring and kinder ways to express your view.</p><span class="mode-link">Start a practice <b>→</b></span></button>
+        </div>
+        <p class="privacy-line">Your words deserve care. Remove names and sensitive personal details before adding a conversation.</p>
+      </section>
+
+      <section class="view" id="transcript">
+        <button class="back nav-action" data-view="home">← Back to session choices</button>
+        <header class="page-head"><p class="eyebrow">Transcript reflection</p><h1>Understand what happened<br><em>between the lines.</em></h1><p>Paste a transcript or upload a simple text file. Bettersaid will create an even-handed reflection.</p></header>
+        <section class="input-card"><div class="input-top"><h2>Add a conversation</h2><span>Step 1 of 2</span></div><div class="source-row"><button class="source-pill selected" data-source="paste">Paste transcript</button><button class="source-pill" data-source="upload">Upload .txt or .md</button><input id="file-upload" type="file" accept=".txt,.md" hidden></div><textarea id="transcript-input" placeholder="Paste the conversation here. Add speaker names only if everyone is comfortable being identified.">Alex: People who oppose this policy simply do not care about the future.
+Sam: That is unfair. You always make everything political.
+Alex: I am just saying that we need responsible people to take action.</textarea><div class="input-footer"><span id="word-count"></span><span id="file-status">Text is analysed as written. Tone and context may be missing.</span></div><button id="generate-report" class="primary">Create reflection <span>→</span></button></section>
+      </section>
+
+      <section class="view" id="report">
+        <button class="back nav-action" data-view="transcript">← Edit transcript</button>
+        <header class="report-title"><div><p class="eyebrow">Conversation reflection</p><h1>A calmer reading of<br><em>the exchange.</em></h1></div><div class="report-actions"><button id="save-report" class="secondary">Save HTML report ↓</button><button id="ask-about-report" class="primary small">Talk this through →</button></div></header>
+        <p class="report-limit">This reflection considers the written words only. It cannot know tone, history, intent, or what was left unsaid.</p>
+        <article class="report-slide overview-slide"><p class="slide-kicker">01 · Overview</p><h2>Both people appear to want to be taken seriously.</h2><p>Alex is expressing concern about the future. Sam is pushing back against feeling characterised unfairly. The conversation becomes defensive when each side talks about the other person’s motives rather than their concern.</p></article>
+        <div class="report-grid"><article class="report-slide"><p class="slide-kicker">02 · A moment to revisit</p><blockquote>“People who oppose this policy simply do not care about the future.”</blockquote><h3>A broad claim about motives</h3><p>This can make a person feel dismissed before they have shared why they see the issue differently.</p><div class="way-forward"><b>A way forward</b><span>“I’m worried about what this could mean for the future. What concerns are you weighing most?”</span></div></article><article class="report-slide"><p class="slide-kicker">03 · A moment to revisit</p><blockquote>“You always make everything political.”</blockquote><h3>An absolute statement</h3><p>“Always” can turn one difficult moment into a judgment of the person, which often closes the conversation.</p><div class="way-forward"><b>A way forward</b><span>“When the conversation shifts to politics, I lose track of the practical concern I’m trying to raise.”</span></div></article></div>
+        <article class="report-slide closing-slide"><p class="slide-kicker">04 · Closing reflection</p><h2>There may be more shared concern here than the exchange shows.</h2><p>Both sides may care about the future and the consequences of the policy, while disagreeing about which response is responsible. Understanding that difference does not require agreement.</p></article>
+      </section>
+
+      <section class="view" id="live-setup">
+        <button class="back nav-action" data-view="home">← Back to session choices</button>
+        <header class="page-head"><p class="eyebrow">Conversation practice</p><h1>Prepare before the<br><em>conversation gets hard.</em></h1><p>Bettersaid will help you practise expressing your view while keeping curiosity about the other person.</p></header>
+        <section class="setup-card"><span class="large-bubble">◌</span><label for="topic">What topic are you preparing to discuss?</label><input id="topic" placeholder="For example: immigration policy with my brother"><label for="other-side">What do you think matters most to the other person?</label><textarea id="other-side" placeholder="Describe their view as fairly as you can."></textarea><button id="start-live" class="primary">Start a practice conversation <span>→</span></button><p class="hint">You can change your mind, pause, or end the practice at any time.</p></section>
+      </section>
+
+      <section class="view" id="live-chat">
+        <button class="back nav-action" data-view="live-setup">← Change practice details</button>
+        <header class="chat-head"><div><p class="eyebrow">Practice conversation</p><h1>Let’s slow it down.</h1><p id="topic-label">A neutral space to rehearse your next conversation.</p></div><span class="neutral-chip">Neutral companion</span></header>
+        <div id="live-messages" class="messages"><div class="message agent"><span class="agent-avatar">B</span><div><p id="welcome-message">I’m Bettersaid. I’ll help you prepare, not decide who is right. Start by sharing what you most want the other person to understand.</p></div></div></div>
+        <form id="live-form" class="chat-form"><input id="live-input" autocomplete="off" placeholder="Write what you would say…"><button aria-label="Send">↑</button></form>
+        <div id="mentor-note" class="mentor-note"><p class="eyebrow">Gentle mentoring</p><p>Try speaking from your own concern before describing the other person’s view. “I’m worried that…” often leaves more room than “You don’t understand…”</p></div>
+        <button id="finish-live" class="secondary">Save my practice notes ↓</button>
+      </section>
+
+      <section class="view" id="library"><header class="page-head"><p class="eyebrow">My reflections</p><h1>A place to return to<br><em>thoughtful conversations.</em></h1><p>Saved reports are downloaded to your computer. This private prototype does not keep a cloud history.</p></header><div class="empty-state"><span>◫</span><h2>No saved reflections here yet</h2><p>Create a transcript reflection or practise a conversation to get started.</p><button class="primary nav-action" data-view="home">Choose a session <span>→</span></button></div></section>
+
+      <section class="view" id="guide"><button class="back nav-action" data-view="home">← Back to session choices</button><header class="page-head"><p class="eyebrow">How Bettersaid works</p><h1>A guide for<br><em>thoughtful disagreement.</em></h1></header><div class="how-grid"><article><span>01</span><h2>Choose a space</h2><p>Reflect on a finished transcript or practise for a conversation that is still to come.</p></article><article><span>02</span><h2>Keep the focus human</h2><p>Bettersaid looks at how words may land. It does not judge anyone’s beliefs or declare a winner.</p></article><article><span>03</span><h2>Find a way forward</h2><p>Each observation includes a question, rewrite, or invitation to restate a point more clearly.</p></article></div><details class="instruction-box"><summary>View the agent’s instructions</summary><p>Bettersaid stays neutral, uses the same standard for every participant, avoids verdicts, and pairs every observation with a practical way forward. It names limits in text-only analysis and prioritises de-escalation when a conversation becomes unsafe.</p><a href="skills/better-said/SKILL.md" target="_blank">Open the full Better Said skill file →</a></details></section>
+    </main>
+  </div><div class="toast" id="toast"></div><script src="app.js"></script>
+</body></html>
